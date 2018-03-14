@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zd.christopher.bean">
+	<class name="Administrator" table="Administrator" lazy="false">
+		<id name="id">
+			<generator class="native" />
+		</id>
+			
+		<!-- Administrator - User 1 - 1 -->
+		<one-to-one name="user" class="User"/>
+		<!-- Administrator - Course	* - * -->
+		<set name="course"  table="Administrator_Course" >
+			<key column="aid"/>
+			<many-to-many class="Course" column="cid" />
+		</set>
+	</class>
+</hibernate-mapping>

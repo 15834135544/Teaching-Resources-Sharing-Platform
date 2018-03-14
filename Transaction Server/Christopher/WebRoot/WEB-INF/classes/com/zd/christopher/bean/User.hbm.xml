@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zd.christopher.bean">
+	<class name="User" table="User" dynamic-update="true" lazy="false">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+	
+		<property name="userId" column="user_id" unique="true"/>
+		<property name="userName" column="user_name" unique="true"/>
+		<property name="pwd"/>
+		<property name="encryptedPwd" />
+		<property name="avatar" />
+		<property name="birthday" />
+		<property name="gender" />
+		<property name="email" />
+		<property name="phone" />
+		<property name="fax" />
+		<property name="address" />
+		<property name="zipCode" column="zip_code"/>
+		<property name="country" />
+		<property name="nationality" />
+		<property name="idCard" column="id_card"/>
+		
+		<!-- User - Course * - * -->
+		<set name="favorCourse" table="User_Course">
+			<key column="uid" />
+			<many-to-many class="Course" column="cid"/>
+		</set>
+		<!-- User - Administrator 1 - 1 -->
+		<many-to-one name="administrator" class="Administrator" column="aid" unique="true"/>	
+		<!-- User - Document * - * -->
+		<set name="favorDocument" table="Document_User" inverse="true" >
+			<key column="uid"/>
+			<many-to-many class="Document" column="did"/>
+		</set>
+		<!-- User - Document 1 - * -->
+		<set name="authorDocument" cascade="save-update" inverse="true" >
+			<key column="uid" />
+			<one-to-many class="Document"/>
+		</set>
+		<!-- User - Video * - * -->
+		<set name="favorVideo" table="Video_User" inverse="true" >
+			<key column="uid"/>
+			<many-to-many class="Video" column="vid"/>
+		</set>
+		<!-- User - Video 1 - * -->
+		<set name="authorVideo" cascade="save-update" inverse="true" >
+			<key column="uid" />
+			<one-to-many class="Video"/>
+		</set>
+		<!-- User - Faculty	1 - 1 -->
+		<many-to-one name="faculty" class="Faculty" column="fid" unique="true" />	
+		<!-- User - Student	1 - 1 -->
+		<many-to-one name="student" class="Student" column="sid" unique="true" />	
+	</class>
+</hibernate-mapping>

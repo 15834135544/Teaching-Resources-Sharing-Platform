@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zd.christopher.bean">
+	<class name="Faculty" table="Faculty" lazy="false">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+	
+		<property name="facultyId" column="faculty_id" unique="true"/>
+		<property name="facultyName" column="faculty_name" />
+		<property name="institution" />
+		<property name="title" />
+		<property name="position" />
+		<property name="introduction" />
+		<property name="image" />
+		
+		<!-- Faculty - Course 1 - * -->
+		<set name="course" cascade="all-delete-orphan" inverse="true">
+			<key column="fid"/>
+			<one-to-many class="Course"/>
+		</set>
+		<!-- Faculty - User	1 - 1 -->
+		<one-to-one name="user" class="User"/>
+	</class>
+</hibernate-mapping>

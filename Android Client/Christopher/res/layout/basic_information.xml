@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+
+        <TableLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/activity_horizontal_margin" >
+        
+        <TableRow
+            android:id="@+id/TableRow15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin" >
+
+            <TextView
+                android:id="@+id/parking_space"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="@string/parking_space" />
+
+            <TextView
+                android:id="@+id/parking_space_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" 
+                android:text="35"/>
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/TableRow16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin" >
+
+            <TextView
+                android:id="@+id/parking_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="@string/parking_status" />
+            
+            <TextView
+                android:id="@+id/parking_status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="停车中"/>
+         
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin" >
+
+            <TextView
+                android:id="@+id/parking_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="@string/parking_location" 
+                />
+
+            <TextView
+                android:id="@+id/parking_location_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="综合楼停车场"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin" >
+
+            <TextView
+                android:id="@+id/parking_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="@string/parking_start_time" />
+            
+            <TextView
+                android:id="@+id/parking_start_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="12:25"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin" >
+
+            <TextView
+                android:id="@+id/parking_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="@string/parking_time" />
+            
+            <TextView
+                android:id="@+id/parking_time_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1小时15分钟"/>
+        
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/TableRow09"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin" >
+
+            <TextView
+                android:id="@+id/parking_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:text="@string/parking_payment" />
+            
+            <TextView
+                android:id="@+id/parking_payment_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="8元"/>        
+        </TableRow>
+        </TableLayout>
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+	
+<struts>
+	<constant name="struts.action.extension" value="action,,"></constant>
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.ui.theme" value="simple"/>
+	
+	<package name="action" namespace="/" extends="struts-default">
+	
+		<interceptors>
+			<interceptor-stack name="appStack">
+				<interceptor-ref name="paramsPrepareParamsStack" />
+			</interceptor-stack>
+		</interceptors>
+		<!-- 
+		<global-results>
+		 	<result name="error" type="stream">com.zd.christopher.action.BaseAction.result</result>  
+		</global-results>
+		<global-exception-mappings>  
+            <exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>  
+        </global-exception-mappings>  
+		-->
+		<action name="userAction_*" class="userAction" method="{1}">
+			<result name="success" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="error" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="input" type="redirect">
+				http://www.baidu.com
+			</result>
+		</action>
+		
+		<action name="administratorAction_*" class="administratorAction" method="{1}">
+			<result name="success" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="error" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="input" type="redirect">
+				http://www.baidu.com
+			</result>
+		</action>
+		
+		<action name="courseAction_*" class="courseAction" method="{1}">
+			<result name="success" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="error" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="input" type="redirect">
+				http://www.baidu.com
+			</result>
+		</action>
+		
+		<action name="documentAction_*" class="documentAction" method="{1}">
+			<result name="success" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="error" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="input" type="redirect">
+				http://www.baidu.com
+			</result>
+		</action>
+		
+		<action name="facultyAction_*" class="facultyAction" method="{1}">
+			<result name="success" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="error" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="input" type="redirect">
+				http://www.baidu.com
+			</result>
+		</action>
+
+		<action name="studentAction_*" class="studentAction" method="{1}">
+			<result name="success" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="error" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="input" type="redirect">
+				http://www.baidu.com
+			</result>
+		</action>
+		
+		<action name="videoAction_*" class="videoAction" method="{1}">
+			<result name="success" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="error" type="stream">
+				<param name="inputName">result</param>
+			</result>
+			<result name="input" type="redirect">
+				http://www.baidu.com
+			</result>
+		</action>
+		
+	</package>
+	
+</struts>

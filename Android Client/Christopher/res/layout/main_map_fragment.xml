@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/map_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/map_rb_baidu_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="浏览" />
+
+            <RadioButton
+                android:id="@+id/map_rb_location_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布" />
+
+        </RadioGroup>
+		
+	        <LinearLayout
+            android:id="@+id/map_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            </LinearLayout>
+
+       
+
+</LinearLayout>

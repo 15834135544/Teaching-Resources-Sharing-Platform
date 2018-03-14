@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//OpenSymphony Group//XWork Validator Config 1.0//EN"
+  		"http://www.opensymphony.com/xwork/xwork-validator-config-1.0.dtd">
+ <validators>
+ 	<validator name="userActionValidator" class="com.zd.christopher.validator.UserActionValidator"/>
+ 	<validator name="administratorActionValidator" class="com.zd.christopher.validator.AdministratorActionValidator"/>
+ 	<validator name="courseActionValidator" class="com.zd.christopher.validator.CourseActionValidator"/>
+ 	<validator name="FacultyActionValidator" class="com.zd.christopher.validator.FacultyActionValidator"/>
+ 	<validator name="studentActionValidator" class="com.zd.christopher.validator.StudentActionValidator"/>
+ 	<validator name="documentActionValidator" class="com.zd.christopher.validator.DocumentActionValidator"/>
+ 	<validator name="videoActionValidator" class="com.zd.christopher.validator.VideoActionValidator"/>
+ </validators>

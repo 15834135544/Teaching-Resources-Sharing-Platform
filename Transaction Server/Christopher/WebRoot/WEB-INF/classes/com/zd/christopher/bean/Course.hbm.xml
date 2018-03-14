@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zd.christopher.bean">
+	<class name="Course" table="Course" lazy="false">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+	
+		<property name="courseId" column="course_id" unique="true" />
+		<property name="courseName" column="course_name" />
+		<property name="credit" />
+		<property name="semester" />
+		<property name="period" />
+		<property name="introduction" />
+		<property name="image" />
+		
+		<!-- Course - Faculty * - 1 -->
+		<many-to-one name="faculty" class="Faculty" column="fid" cascade="save-update"/>
+		<!-- Course - Student * - * -->
+		<set name="student" table="Student_Course" inverse="true" >
+			<key column="cid"/>
+			<many-to-many class="Student" column="sid"/>
+		</set>
+		<!-- Course - Document 1 - * -->
+		<set name="document"  cascade="all-delete-orphan" inverse="true">
+			<key column="cid"/>
+			<one-to-many class="Document"/>
+		</set>
+		<!-- Course - Video	1 - * -->
+		<set name="video"  cascade="all-delete-orphan" inverse="true">
+			<key column="cid"/>
+			<one-to-many class="Video"/>
+		</set>
+		<!-- Course - Administrator * - * -->
+		<set name="administrator" table="Administrator_Course" inverse="true">
+			<key column="cid"/>
+			<many-to-many class="Administrator" column="aid"/>
+		</set>
+		<!-- Course - User * - * -->
+		<set name="favorUser" table="User_Course" inverse="true">
+			<key column="cid"/>
+			<many-to-many class="User" column="uid"/>
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zd.christopher.bean">
+	<class name="Document" table="Document" lazy="false">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+	
+		<property name="documentName" column="document_name" />
+		<property name="url" />
+		<property name="updatedTime" column="update_time"/>
+		<property name="image" />
+		<property name="type" />
+		
+		<!-- Document - Course * - 1 -->
+		<many-to-one name="course" class="Course" column="cid" cascade="save-update"/>
+		<!-- Document - User * - 1 -->
+		<many-to-one name="author" class="User" column="uid" cascade="save-update"/>
+		<!-- Document - User * - * -->
+		<set name="favorUser" table="Document_User">
+			<key column="did"/>
+			<many-to-many class="User" column="uid" />
+		</set>
+	</class>
+</hibernate-mapping>

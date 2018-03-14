@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+      <SearchView
+        android:id="@+id/searchViewDocument"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:focusable="false"
+        android:queryHint="请输入文档名称" />
+    <ListView
+        android:id="@+id/document_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchViewDocument"
+        android:dividerHeight="1dp"/>
+ 
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.zd.christopher.bean">
+	<class name="Video" table="Video" lazy="false">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+	
+		<property name="videoName" column="video_name" />
+		<property name="url" />
+		<property name="updatedTime" column="update_time"/>
+		<property name="image" />
+		<property name="type" />
+		
+		<!-- Video - Course * - 1 -->
+		<many-to-one name="course" class="Course" column="cid" cascade="save-update"/>
+		<!-- Video - User * - 1 -->
+		<many-to-one name="author" class="User" column="uid" cascade="save-update"/>
+		<!-- Video - User * - * -->
+		<set name="favorUser" table="Video_User">
+			<key column="vid"/>
+			<many-to-many class="User" column="uid" />
+		</set>
+	</class>
+</hibernate-mapping>

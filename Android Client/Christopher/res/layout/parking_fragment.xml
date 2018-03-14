@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    	<SearchView
+        android:id="@+id/searchViewStream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:focusable="false"
+        android:queryHint="请输入用户昵称" />
+	
+        <ListView
+            android:id="@+id/stream_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchViewStream"
+            android:dividerHeight="1dp" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="200dp"
+            android:layout_height="100dp"   
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="44dp"
+            android:background="@drawable/stream_button"
+            android:text="开始直播" />
+
+</RelativeLayout>
