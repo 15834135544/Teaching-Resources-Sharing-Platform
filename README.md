@@ -1,6 +1,8 @@
-# Christopher
+# Teaching-Resources-Sharing-Platform
 
-Teaching Resources Sharing Platform
+Teaching Resources Sharing Platform (V1.0, Christopher)
+
+*Christopher: from Christopher Morcom, the father of computer science -- Alan Turing's "first love"
 
 ## Getting Started
 
