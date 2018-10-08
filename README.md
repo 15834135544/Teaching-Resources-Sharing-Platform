@@ -2,7 +2,7 @@
 
 Teaching Resources Sharing Platform (V1.0, Christopher)
 
-*Christopher: from Christopher Morcom, the father of computer science -- Alan Turing's "first love"
+*Christopher: from [Christopher Morcom](https://en.wikipedia.org/wiki/Alan_Turing#Christopher_Morcom), the father of computer science -- Alan Turing's "first love"
 
 ## Getting Started
 
